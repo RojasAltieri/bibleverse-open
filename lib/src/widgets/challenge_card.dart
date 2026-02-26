@@ -89,27 +89,31 @@ class ChallengeCard extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 12),
-            Row(
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
               children: [
                 Chip(
                   label: Text(challenge.category),
                   avatar: const Icon(Icons.category_outlined, size: 16),
                 ),
-                const SizedBox(width: 8),
                 Chip(
                   label: Text(challenge.difficulty),
                   avatar: const Icon(Icons.speed_rounded, size: 16),
                 ),
-                const Spacer(),
-                TextButton.icon(
-                  onPressed: onPrimaryAction,
-                  icon: const Icon(Icons.arrow_forward_rounded, size: 16),
-                  label: Text(
-                    primaryActionLabel,
-                    style: const TextStyle(fontWeight: FontWeight.w800),
-                  ),
-                ),
               ],
+            ),
+            const SizedBox(height: 6),
+            Align(
+              alignment: Alignment.centerRight,
+              child: TextButton.icon(
+                onPressed: onPrimaryAction,
+                icon: const Icon(Icons.arrow_forward_rounded, size: 16),
+                label: Text(
+                  primaryActionLabel,
+                  style: const TextStyle(fontWeight: FontWeight.w800),
+                ),
+              ),
             ),
           ],
         ),

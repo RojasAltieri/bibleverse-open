@@ -81,6 +81,19 @@ flutter run
 
 Primary target is Android and iOS. The example also runs on web and desktop for contributor convenience.
 
+## Connect real DB data
+
+`bibleverse_open` stays UI-only. Keep DB/auth/API in your main app and map payloads to package models:
+
+```dart
+final streak = StreakData.fromMap(apiResponse['streak']);
+final challenge = ChallengeData.fromMap(apiResponse['activeChallenge']);
+
+return StreakOverviewCard(streak: streak);
+```
+
+This keeps the main app clean without coupling UI package code to backend providers.
+
 ## Contribution scope (important)
 
 Accepted:
