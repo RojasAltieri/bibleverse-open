@@ -2,6 +2,11 @@
 
 Thanks for helping improve this package.
 
+## License notice
+
+By contributing, you agree that your changes can be integrated into BibleVerse
+under the repository license in [LICENSE](LICENSE).
+
 ## Before you code
 
 1. Open an issue describing the change.
@@ -23,6 +28,7 @@ Not allowed:
 - Auth systems and real user data flows
 - Supabase/Firestore production connectors
 - Monetization, billing, ads, or secret keys
+- Competing app packaging or redistribution
 
 ## Code standards
 

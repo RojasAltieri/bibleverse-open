@@ -1,9 +1,10 @@
 # bibleverse_open
 
-Open-source Flutter package with plug-and-play BibleVerse-inspired UI widgets.
+Flutter package with plug-and-play BibleVerse-inspired UI widgets.
 
 This package only ships client-side UI and mock/public-safe data models.
 It does not include auth, backend integrations, user profiles, monetization, or private keys.
+This repository is source-available under a custom non-compete license.
 
 ## Features
 
@@ -22,7 +23,7 @@ It does not include auth, backend integrations, user profiles, monetization, or 
 dependencies:
   bibleverse_open:
     git:
-      url: https://github.com/YOUR_ORG/bibleverse_open.git
+      url: https://github.com/RojasAltieri/bibleverse-open.git
 ```
 
 ### Local path (while developing)
@@ -95,4 +96,5 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
 ## License
 
-[MIT](LICENSE)
+This repository uses the **BibleVerse Community License (Source-Available, Non-Compete) - v1.0**.
+See [LICENSE](LICENSE).

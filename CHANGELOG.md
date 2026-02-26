@@ -1,3 +1,10 @@
+## 0.1.1
+
+- Updated repository links to official GitHub remote.
+- Replaced MIT with custom `BibleVerse Community License (Source-Available, Non-Compete) - v1.0`.
+- Added `TRADEMARK.md`.
+- Updated docs to reflect source-available non-OSI terms.
+
 ## 0.1.0
 
 - Initial open-source release of `bibleverse_open`.

@@ -1,21 +1,35 @@
-MIT License
+BibleVerse Community License (Source-Available, Non-Compete) - v1.0
+Copyright (c) 2026 Altieri / BibleVerse
 
-Copyright (c) 2026 BibleVerse Open Contributors
+Este codigo es source-available exclusivamente para contribuir mejoras a la app oficial BibleVerse.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permisos:
+- Ver, clonar y modificar localmente.
+- Enviar Pull Requests para integracion en BibleVerse.
+- Uso personal, educativo o de prueba no publica.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Prohibiciones:
+- Usar (total o parcial) para crear, publicar, distribuir o monetizar apps competidoras o similares (habitos biblicos, lectura diaria, rachas, desafios, etc.).
+- Redistribuir como paquete, libreria o app sin permiso escrito.
+- Usar nombre "BibleVerse", logos o marcas asociadas.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+El autor retiene todos los derechos para integrar contribuciones en BibleVerse.
+
+Esta no es una licencia open-source OSI. Proposito: colaboracion para BibleVerse, no competencia.
+
+English version:
+This code is source-available solely for contributing improvements to the official BibleVerse app.
+
+Permissions:
+- View, clone, and modify locally.
+- Submit Pull Requests for integration into BibleVerse.
+- Personal, educational, or non-public testing use.
+
+Prohibitions:
+- Use (whole or partial) to create, publish, distribute, or monetize competing or similar apps (Bible habits, daily reading, streaks, challenges, etc.).
+- Redistribute as package, library, or app without written permission.
+- Use "BibleVerse" name, logos, or associated marks.
+
+All rights reserved for integration into BibleVerse.
+
+Not OSI-approved open-source. Purpose: collaboration for BibleVerse, no competition.
