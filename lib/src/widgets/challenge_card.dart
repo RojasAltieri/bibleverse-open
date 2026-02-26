@@ -8,7 +8,7 @@ class ChallengeCard extends StatelessWidget {
     required this.challenge,
     this.onTap,
     this.onPrimaryAction,
-    this.primaryActionLabel = 'Continuar',
+    this.primaryActionLabel = 'Continuar dia actual',
   });
 
   final ChallengeData challenge;
@@ -19,80 +19,101 @@ class ChallengeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+    final currentDay = challenge.completedSteps + 1;
+    final totalDays = challenge.totalSteps;
 
-    return Card(
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                challenge.title,
-                style: Theme.of(
-                  context,
-                ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700),
-              ),
-              const SizedBox(height: 8),
-              Text(challenge.description),
-              const SizedBox(height: 10),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: [
-                  Chip(
-                    avatar: const Icon(Icons.category_rounded, size: 18),
-                    label: Text(challenge.category),
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(24),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: colorScheme.primary.withValues(alpha: 0.06),
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(
+            color: colorScheme.primary.withValues(alpha: 0.25),
+          ),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: colorScheme.primary.withValues(alpha: 0.12),
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                  Chip(
-                    avatar: const Icon(Icons.speed_rounded, size: 18),
-                    label: Text(challenge.difficulty),
+                  child: Icon(
+                    Icons.menu_book_rounded,
+                    color: colorScheme.primary,
+                    size: 18,
                   ),
-                  if (challenge.dueDate != null)
-                    Chip(
-                      avatar: const Icon(
-                        Icons.calendar_today_rounded,
-                        size: 18,
-                      ),
-                      label: Text(_formatDate(challenge.dueDate!)),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    challenge.title,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.w700,
                     ),
-                ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Dia $currentDay de $totalDays',
+              style: Theme.of(
+                context,
+              ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800),
+            ),
+            const SizedBox(height: 6),
+            Text(
+              challenge.description,
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                color: colorScheme.onSurfaceVariant,
               ),
-              const SizedBox(height: 12),
-              LinearProgressIndicator(
+            ),
+            const SizedBox(height: 12),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(999),
+              child: LinearProgressIndicator(
                 value: challenge.progress,
                 minHeight: 8,
-                borderRadius: BorderRadius.circular(24),
+                backgroundColor: colorScheme.outline.withValues(alpha: 0.2),
+                valueColor: AlwaysStoppedAnimation<Color>(colorScheme.primary),
               ),
-              const SizedBox(height: 8),
-              Text(
-                '${challenge.completedSteps}/${challenge.totalSteps} pasos',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: colorScheme.onSurfaceVariant,
+            ),
+            const SizedBox(height: 12),
+            Row(
+              children: [
+                Chip(
+                  label: Text(challenge.category),
+                  avatar: const Icon(Icons.category_outlined, size: 16),
                 ),
-              ),
-              const SizedBox(height: 12),
-              Align(
-                alignment: Alignment.centerRight,
-                child: FilledButton.icon(
+                const SizedBox(width: 8),
+                Chip(
+                  label: Text(challenge.difficulty),
+                  avatar: const Icon(Icons.speed_rounded, size: 16),
+                ),
+                const Spacer(),
+                TextButton.icon(
                   onPressed: onPrimaryAction,
-                  icon: const Icon(Icons.play_arrow_rounded),
-                  label: Text(primaryActionLabel),
+                  icon: const Icon(Icons.arrow_forward_rounded, size: 16),
+                  label: Text(
+                    primaryActionLabel,
+                    style: const TextStyle(fontWeight: FontWeight.w800),
+                  ),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          ],
         ),
       ),
     );
-  }
-
-  String _formatDate(DateTime date) {
-    final day = date.day.toString().padLeft(2, '0');
-    final month = date.month.toString().padLeft(2, '0');
-    final year = date.year.toString();
-    return '$day/$month/$year';
   }
 }

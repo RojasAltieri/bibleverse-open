@@ -1,3 +1,14 @@
+## 0.2.0
+
+- Reworked package to include curated UI patterns adapted from BibleVerse app screens.
+- Added `DailyReadingPlanCard`.
+- Added `VerseTextFlow`.
+- Added `VerseShareCard`.
+- Added new models: `ReadingPlanEntry`, `VerseFlowItem`.
+- Updated core widgets (`StreakOverviewCard`, `ChallengeCard`, `VerseReaderCard`, `ProgressBadgeChip`) with BibleVerse visual language.
+- Updated mock data and example app to showcase curated components.
+- Updated license ownership wording to `BIBLEVERSE, LLC`.
+
 ## 0.1.1
 
 - Updated repository links to official GitHub remote.

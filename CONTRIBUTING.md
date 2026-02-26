@@ -6,6 +6,7 @@ Thanks for helping improve this package.
 
 By contributing, you agree that your changes can be integrated into BibleVerse
 under the repository license in [LICENSE](LICENSE).
+Rights holder: **BIBLEVERSE, LLC**.
 
 ## Before you code
 

@@ -2,18 +2,22 @@
 
 Flutter package with plug-and-play BibleVerse-inspired UI widgets.
 
-This package only ships client-side UI and mock/public-safe data models.
+This package ships client-side UI and mock/public-safe data models.
 It does not include auth, backend integrations, user profiles, monetization, or private keys.
 This repository is source-available under a custom non-compete license.
+UI components are curated from real BibleVerse app patterns and adapted for standalone use.
 
 ## Features
 
-- `VerseReaderCard`: verse reading card with quick actions
-- `StreakOverviewCard`: streak summary and weekly progress
-- `ChallengeCard`: challenge progress card
+- `VerseReaderCard`: verse card inspired by BibleVerse reading UI
+- `StreakOverviewCard`: streak hero card inspired by BibleVerse streak screen
+- `DailyReadingPlanCard`: daily chapter list inspired by BibleVerse challenge navigator
+- `ChallengeCard`: active challenge card inspired by BibleVerse challenge dashboard
+- `VerseTextFlow`: continuous verse text with optional highlight spans
+- `VerseShareCard`: social-share styled verse card inspired by BibleVerse share templates
 - `ProgressBadgeChip` and `ProgressBadgeWrap`: reusable progress badges
-- `BibleVerseOpenTheme.light()`: mobile-ready Material 3 theme
-- `BibleVerseMockData`: hardcoded demo data to start fast
+- `BibleVerseOpenTheme.light()` and `.dark()`: app-inspired themes
+- `BibleVerseMockData`: hardcoded safe data to start quickly
 
 ## Install
 
@@ -47,6 +51,7 @@ class DemoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final verse = BibleVerseMockData.verseOfTheDay;
     final streak = BibleVerseMockData.sampleStreak;
+    final readings = BibleVerseMockData.sampleDailyReadings;
 
     return ListView(
       padding: const EdgeInsets.all(16),
@@ -54,6 +59,11 @@ class DemoScreen extends StatelessWidget {
         VerseReaderCard(verse: verse),
         const SizedBox(height: 12),
         StreakOverviewCard(streak: streak),
+        const SizedBox(height: 12),
+        DailyReadingPlanCard(
+          readings: readings,
+          dayLabel: 'Dia 12',
+        ),
       ],
     );
   }
@@ -97,4 +107,5 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 ## License
 
 This repository uses the **BibleVerse Community License (Source-Available, Non-Compete) - v1.0**.
+Copyright holder: **BIBLEVERSE, LLC**.
 See [LICENSE](LICENSE).

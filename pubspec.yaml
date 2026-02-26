@@ -1,6 +1,6 @@
 name: bibleverse_open
-description: "Source-available Flutter UI kit for BibleVerse style widgets using mock client-side data."
-version: 0.1.1
+description: "Source-available Flutter UI kit with curated BibleVerse client-side widgets and mock data."
+version: 0.2.0
 homepage: https://github.com/RojasAltieri/bibleverse-open
 repository: https://github.com/RojasAltieri/bibleverse-open
 issue_tracker: https://github.com/RojasAltieri/bibleverse-open/issues

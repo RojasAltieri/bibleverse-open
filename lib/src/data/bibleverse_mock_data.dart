@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../models/bible_verse.dart';
 import '../models/challenge_data.dart';
 import '../models/progress_badge.dart';
+import '../models/reading_plan_entry.dart';
 import '../models/streak_data.dart';
+import '../models/verse_flow_item.dart';
 
 class BibleVerseMockData {
   static const BibleVerse verseOfTheDay = BibleVerse(
@@ -87,6 +89,44 @@ class BibleVerseMockData {
       subtitle: 'Primer reto completado',
       icon: Icons.emoji_events_rounded,
       color: Color(0xFF6A4C93),
+    ),
+  ];
+
+  static const List<ReadingPlanEntry> sampleDailyReadings = [
+    ReadingPlanEntry(
+      bookCanonicalName: 'psalms',
+      displayName: 'Salmos',
+      chapterNumber: 23,
+      isCompleted: true,
+    ),
+    ReadingPlanEntry(
+      bookCanonicalName: 'proverbs',
+      displayName: 'Proverbios',
+      chapterNumber: 3,
+      isCompleted: false,
+    ),
+    ReadingPlanEntry(
+      bookCanonicalName: 'john',
+      displayName: 'Juan',
+      chapterNumber: 15,
+      isCompleted: false,
+    ),
+  ];
+
+  static const List<VerseFlowItem> sampleVerseFlow = [
+    VerseFlowItem(
+      verseNumber: '1',
+      text: 'Jehová es mi pastor; nada me faltará.',
+    ),
+    VerseFlowItem(
+      verseNumber: '2',
+      text: 'En lugares de delicados pastos me hará descansar.',
+      highlightColor: Color(0xFFFFE7B2),
+    ),
+    VerseFlowItem(
+      verseNumber: '3',
+      text:
+          'Confortará mi alma; me guiará por sendas de justicia por amor de su nombre.',
     ),
   ];
 }

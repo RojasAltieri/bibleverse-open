@@ -27,4 +27,22 @@ void main() {
     expect(find.text('Compartir'), findsOneWidget);
     expect(find.text('Guardar'), findsOneWidget);
   });
+
+  testWidgets('DailyReadingPlanCard renders progress labels', (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: DailyReadingPlanCard(
+            readings: BibleVerseMockData.sampleDailyReadings,
+            dayLabel: 'Dia 12',
+            currentIndex: 1,
+          ),
+        ),
+      ),
+    );
+
+    expect(find.text('Plan del Dia'), findsOneWidget);
+    expect(find.text('Progreso del dia'), findsOneWidget);
+    expect(find.text('Capitulo 3'), findsOneWidget);
+  });
 }
